@@ -47,9 +47,9 @@ def print_abacus(value):
     for n in range(10,0,-1):
         if n <= ndigits:
             digit_value = int(str(value)[ndigits-n])
-            my_abacus = my_abacus + blank_abacus[0:10-digit_value] + '   ' + blank_abacus[10-digit_value+1:] + '\n'
+            my_abacus = my_abacus + blank_abacus[0:10-digit_value+1] + '   ' + blank_abacus[10-digit_value+1:] + '\n'
         else:
-            my_abacus = my_abacus + blank_abacus[:-2] + '   ' + '|' + '\n'
+            my_abacus = my_abacus + blank_abacus[:-1] + '   ' + '|' + '\n'
     print my_abacus
        #
 

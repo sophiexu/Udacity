@@ -41,14 +41,16 @@
 
 def print_abacus(value):
        #
-       ndigits = len(str(value))
-       blank_abacus = '|00000*****|'
-       for n in range(10,0,-1):
+    ndigits = len(str(value))
+    blank_abacus = '|00000*****|'
+    my_abacus = ''
+    for n in range(10,0,-1):
         if n <= ndigits:
             digit_value = int(str(value)[ndigits-n])
-            print blank_abacus[0:10-digit_value] + '   ' + blank_abacus[10-digit_value+1:]
+            my_abacus = my_abacus + blank_abacus[0:10-digit_value] + '   ' + blank_abacus[10-digit_value+1:] + '\n'
         else:
-            print blank_abacus[:-2] + '   ' + '|'
+            my_abacus = my_abacus + blank_abacus[:-2] + '   ' + '|' + '\n'
+    print my_abacus
        #
 
 ###  TEST CASES

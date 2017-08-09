@@ -17,7 +17,7 @@
 def split_string(source,splitlist):
     split_words = []
     source_copy = source
-    index = 0
+    #index = 0
     word = ''
     for character in source:
         if character in splitlist:
@@ -26,7 +26,7 @@ def split_string(source,splitlist):
                 word = ''
         else:
             word = word + character           
-        index = index + 1
+        #index = index + 1
     if word != '':
         split_words.append(word)
             
